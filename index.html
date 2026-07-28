@@ -34,7 +34,7 @@
   .work-scroll::-webkit-scrollbar { display: none; }
   .work-card { flex: 0 0 340px; scroll-snap-align: start; border: 1px solid #E5E4E0; border-radius: 14px; overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease; }
   .work-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(30,33,38,0.12); }
-  .work-thumb { width: 100%; height: 230px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 44px; font-weight: 700; letter-spacing: 1px; }
+  .work-thumb { width:100%; height:230px; display:block; object-fit:cover; }
   .work-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B9642F; background: #F5E7DD; padding: 4px 9px; border-radius: 6px; }
   .work-dot { width: 8px; height: 8px; border-radius: 4px; background: #DCD9D4; transition: all .3s ease; cursor: pointer; border: none; padding: 0; }
   .work-dot.is-active { width: 22px; background: #B9642F; }
@@ -70,7 +70,7 @@
       <a href="#contact" class="nav-link">contact</a>
     </div>
     <div style="display:flex;gap:10px;">
-      <a href="https://github.com/daveyp10" target="_blank" class="social-link">GH</a>
+      <a href="https://github.com/davelab10" target="_blank" class="social-link">GH</a>
       <a href="https://linkedin.com/in/david-yp" target="_blank" class="social-link">in</a>
     </div>
   </nav>
@@ -161,7 +161,7 @@
         </div>
         <div>
           <div style="font-size:12px;color:#6B6F76;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">GitHub</div>
-          <a href="https://github.com/daveyp10" target="_blank" class="contact-link">github.com/daveyp10</a>
+          <a href="https://github.com/davelab10" target="_blank" class="contact-link">github.com/davelab10</a>
         </div>
         <div>
           <div style="font-size:12px;color:#6B6F76;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">LinkedIn</div>
@@ -192,13 +192,12 @@
   var skills = ['Python', 'FastAPI', 'Next.js', 'TypeScript', 'PostgreSQL', 'Stripe API', 'OpenCV', 'IndexedDB', 'Workflow Automation'];
 
   var projects = [
-    { id: 'stripe-billing', title: 'Stripe Billing', desc: "Stripe accounts receivable module for RailCall. 25 commands covering invoicing through collections, every money-moving call idempotent.", tags: ['automation', 'API integration'], meta: '$79 · Live on RailCall Marketplace', tint: '#B9642F' },
-    { id: 'retainer-billing', title: 'Retainer Billing Run', desc: 'RailCall workflow for monthly client billing with a self-enforced spend cap that blocks the batch before a cent moves.', tags: ['automation', 'workflow governance'], meta: 'Free · Live on RailCall Marketplace', tint: '#B9642F' },
-    { id: 'incraft', title: 'Incraft', desc: 'B2B asset platform demo, built in under two days.', tags: ['FastAPI', 'Next.js'], meta: 'Demo build', tint: '#DCD9D4' },
-    { id: 'invoice-tracker', title: 'Invoice Tracker', desc: 'Local browser-based invoicing app with no backend, PDF export, distributed as a standalone package.', tags: ['vanilla JS', 'IndexedDB'], meta: 'Standalone package', tint: '#DCD9D4' },
-    { id: 'ud-bahagia', title: 'UD Bahagia', desc: 'Desktop accounting application built for a small business client.', tags: ['Python', 'desktop app'], meta: 'Client project', tint: '#DCD9D4' },
-    { id: 'symbol-detector', title: 'Electrical Symbol Detector', desc: 'Bounding box detection tool for electrical schematic symbols.', tags: ['PyMuPDF', 'OpenCV', 'computer vision'], meta: 'Internal tool', tint: '#DCD9D4' },
-    { id: 'image-comparator', title: 'Image Comparator', desc: 'Tool for visually diffing and comparing images side by side.', tags: ['Python', 'image processing'], meta: 'Internal tool', tint: '#DCD9D4' }
+    { id:'stripe-billing',title:'Stripe Billing',gif:'assets/stripe-billing.gif', desc:"Stripe accounts receivable module for RailCall. 25 commands covering invoicing through collections, every money-moving call idempotent.", tags:['automation','API integration'], meta:'$79 · Live on RailCall Marketplace', tint:'#B9642F'},
+    { id:'retainer-billing',title:'Retainer Billing Run',gif:'assets/retainer-billing.gif', desc:'RailCall workflow for monthly client billing with a self-enforced spend cap that blocks the batch before a cent moves.', tags:['automation','workflow governance'], meta:'Free · Live on RailCall Marketplace', tint:'#B9642F'},
+    { id:'incraft',title:'Incraft',gif:'assets/incraft.gif', desc:'B2B asset platform demo, built in under two days.', tags:['FastAPI','Next.js'], meta:'Demo build', tint:'#DCD9D4'},
+    { id:'invoice-tracker',title:'Invoice Tracker',gif:'assets/invoice-tracker.gif', desc:'Local browser-based invoicing app with no backend, PDF export, distributed as a standalone package.', tags:['vanilla JS','IndexedDB'], meta:'Standalone package', tint:'#DCD9D4'},
+    { id:'ud-bahagia',title:'UD Bahagia',gif:'', desc:'Desktop accounting application built for a small business client.', tags:['Python','desktop app'], meta:'Client project', tint:'#DCD9D4'},
+    { id:'image-comparator',title:'Image Comparator',gif:'assets/image-comparator.gif', desc:'Tool for visually diffing and comparing images side by side.', tags:['Python','image processing'], meta:'Internal tool', tint:'#DCD9D4'}
   ];
 
   function initials(title) {
@@ -224,12 +223,28 @@
     var card = document.createElement('div');
     card.className = 'work-card';
 
-    var thumb = document.createElement('div');
-    thumb.className = 'work-thumb';
-    thumb.style.background = p.tint;
-    thumb.style.color = p.tint === '#B9642F' ? '#fff' : '#1E2126';
-    thumb.textContent = initials(p.title);
-    card.appendChild(thumb);
+    if (p.gif) {
+      var thumb=document.createElement('img');
+      thumb.className='work-thumb';
+      thumb.src=p.gif;
+      thumb.alt=p.title;
+      thumb.loading='lazy';
+      card.appendChild(thumb);
+    } else {
+      var thumb=document.createElement('div');
+      thumb.className='work-thumb';
+      thumb.style.background=p.tint;
+      thumb.style.color=p.tint==='#B9642F'?'#fff':'#1E2126';
+      thumb.style.display='flex';
+      thumb.style.alignItems='center';
+      thumb.style.justifyContent='center';
+      thumb.style.fontFamily="'IBM Plex Mono', monospace";
+      thumb.style.fontSize='44px';
+      thumb.style.fontWeight='700';
+      thumb.style.letterSpacing='1px';
+      thumb.textContent=initials(p.title);
+      card.appendChild(thumb);
+    }
 
     var tintBar = document.createElement('div');
     tintBar.style.cssText = 'height:6px;background:' + p.tint + ';';
