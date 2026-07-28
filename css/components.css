@@ -1,0 +1,608 @@
+/* FILE: css/components.css */
+
+
+/* =====================================
+   SECTION
+===================================== */
+
+
+.section {
+
+
+  padding:
+
+    120px 8vw;
+
+
+}
+
+
+
+
+
+.section h2 {
+
+
+  font-size:
+
+    clamp(2rem,4vw,3.5rem);
+
+
+  letter-spacing:
+
+    -.05em;
+
+
+  margin:
+
+    0 0 60px;
+
+
+}
+
+
+
+
+
+/* =====================================
+   CARD SYSTEM
+===================================== */
+
+
+.card {
+
+
+  padding:
+
+    35px;
+
+
+  border:
+
+    1px solid var(--border);
+
+
+  border-radius:
+
+    24px;
+
+
+  background:
+
+    var(--card);
+
+
+  transition:
+
+
+    transform .4s ease,
+
+    border-color .4s ease;
+
+
+}
+
+
+
+
+
+.card:hover {
+
+
+  transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+.card h3 {
+
+
+  margin:
+
+    0 0 15px;
+
+
+  font-size:
+
+    1.3rem;
+
+
+}
+
+
+
+
+
+.card p {
+
+
+  margin:
+
+    0;
+
+
+  line-height:
+
+    1.7;
+
+
+  opacity:
+
+    .7;
+
+
+}
+
+
+
+
+
+/* =====================================
+   SKILLS GRID
+===================================== */
+
+
+.skills-grid,
+.services-grid {
+
+
+  display:
+
+    grid;
+
+
+  grid-template-columns:
+
+    repeat(3,1fr);
+
+
+  gap:
+
+    24px;
+
+
+}
+
+
+
+
+
+/* =====================================
+   PROJECT GRID
+===================================== */
+
+
+.projects-grid {
+
+
+  display:
+
+    grid;
+
+
+  grid-template-columns:
+
+    repeat(2,1fr);
+
+
+  gap:
+
+    40px;
+
+
+}
+
+
+
+
+
+/* =====================================
+   PROJECT CARD
+===================================== */
+
+
+.project-card {
+
+
+  position:
+
+    relative;
+
+
+  overflow:
+
+    hidden;
+
+
+  border:
+
+    1px solid var(--border);
+
+
+  border-radius:
+
+    28px;
+
+
+  padding:
+
+    24px;
+
+
+  background:
+
+    var(--card);
+
+
+}
+
+
+
+
+
+.project-media {
+
+
+  width:
+
+    100%;
+
+
+  aspect-ratio:
+
+    16 / 10;
+
+
+  overflow:
+
+    hidden;
+
+
+  border-radius:
+
+    20px;
+
+
+  margin-bottom:
+
+    25px;
+
+
+  background:
+
+    rgba(255,255,255,.05);
+
+
+}
+
+
+
+
+
+.project-media img {
+
+
+  width:
+
+    100%;
+
+
+  height:
+
+    100%;
+
+
+  object-fit:
+
+    cover;
+
+
+  display:
+
+    block;
+
+
+  transition:
+
+    transform .6s ease;
+
+
+}
+
+
+
+
+
+.project-card:hover .project-media img {
+
+
+  transform:
+
+    scale(1.05);
+
+
+}
+
+
+
+
+
+/* =====================================
+   PROJECT DETAIL
+===================================== */
+
+
+.project-card h3 {
+
+
+  font-size:
+
+    1.8rem;
+
+
+  margin:
+
+    0 0 14px;
+
+
+  letter-spacing:
+
+    -.04em;
+
+
+}
+
+
+
+
+
+.project-card p {
+
+
+  line-height:
+
+    1.7;
+
+
+  opacity:
+
+    .75;
+
+
+  margin:
+
+    0 0 18px;
+
+
+}
+
+
+
+
+
+.project-card span {
+
+
+  display:
+
+    inline-block;
+
+
+  font-size:
+
+    .85rem;
+
+
+  opacity:
+
+    .65;
+
+
+  padding:
+
+    8px 14px;
+
+
+  border-radius:
+
+    999px;
+
+
+  border:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+
+.contact {
+
+
+  text-align:
+
+    center;
+
+
+}
+
+
+
+
+
+.contact p {
+
+
+  max-width:
+
+    600px;
+
+
+  margin:
+
+    0 auto 40px;
+
+
+  opacity:
+
+    .7;
+
+
+}
+
+
+.button,
+.magnetic.button {
+  background: var(--color-2);
+  color: var(--color-5);
+  border: 1px solid var(--border);
+}
+
+.contact-cta {
+  background: var(--color-1);
+  color: var(--color-5);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.button:hover,
+.magnetic.button:hover {
+  background: var(--color-1);
+}
+
+.contact-cta:hover {
+  filter: brightness(0.95);
+}
+
+
+.contact-links {
+
+
+  display:
+
+    flex;
+
+
+  justify-content:
+
+    center;
+
+
+  gap:
+
+    20px;
+
+
+}
+
+
+
+
+
+.contact-links a {
+
+
+  padding:
+
+    14px 28px;
+
+
+  border-radius:
+
+    999px;
+
+
+  border:
+
+    1px solid var(--border);
+
+
+  text-decoration:
+
+    none;
+
+
+  color:
+
+    inherit;
+  background:
+
+    transparent;
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+.section {
+
+
+  padding:
+
+    80px 24px;
+
+
+}
+
+
+
+.skills-grid,
+.services-grid,
+.projects-grid {
+
+
+  grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
+.project-card h3 {
+
+
+  font-size:
+
+    1.5rem;
+
+
+}
+
+
+
+.contact-links {
+
+
+  flex-direction:
+
+    column;
+
+
+}
+
+
+}

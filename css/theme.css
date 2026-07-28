@@ -1,0 +1,81 @@
+/* FILE: css/theme.css */
+
+/* Palette (user-provided) */
+:root {
+  --color-1: #2C3E50; /* darkest */
+  --color-2: #34495E;
+  --color-3: #7F8C8D;
+  --color-4: #BDC3C7;
+  --color-5: #ECF0F1; /* lightest */
+
+  /* Theme tokens */
+  --bg: var(--color-5);
+  --surface: var(--color-4);
+  --text: var(--color-1);
+  --text-muted: rgba(44,62,80,0.72);
+  --border: rgba(44,62,80,0.08);
+  --accent: var(--color-2);
+}
+
+
+/* Optional light-theme overrides (kept for compatibility) */
+[data-theme="light"] {
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --text: #111111;
+  --text-muted: rgba(17,17,17,.7);
+  --border: rgba(17,17,17,.12);
+  --accent: #111111;
+}
+
+
+/* Apply tokens */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Make core text elements use the theme text color */
+body,
+.header,
+.footer,
+.button,
+.project-card,
+.card,
+.hero-label,
+.hero h1,
+.hero p,
+.section h2,
+.project-card h3,
+.contact-links a {
+  color: var(--text);
+}
+
+.header,
+.footer {
+  color: var(--text);
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* Surface and borders */
+.project-card,
+.card {
+  border-color: var(--border);
+}
+
+.project-media {
+  background: var(--surface);
+}
+
+/* Transitions */
+body,
+.header,
+.project-card,
+.project-media,
+.button,
+.theme-toggle {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}

@@ -1,0 +1,344 @@
+/* FILE: css/globals.css */
+
+
+/* =====================================
+   ROOT CONFIG
+===================================== */
+
+
+:root {
+
+  font-family:
+    "Inter",
+    "SF Pro Display",
+    "SF Pro Text",
+    Arial,
+    sans-serif;
+
+
+  line-height:
+
+    1.5;
+
+
+  font-weight:
+
+    400;
+
+
+  font-synthesis:
+
+    none;
+
+
+  text-rendering:
+
+    optimizeLegibility;
+
+
+  -webkit-font-smoothing:
+
+    antialiased;
+
+
+  -moz-osx-font-smoothing:
+
+    grayscale;
+
+}
+
+
+
+
+
+/* =====================================
+   RESET
+===================================== */
+
+
+*,
+*::before,
+*::after {
+
+
+  box-sizing:
+
+    border-box;
+
+
+}
+
+
+
+
+
+html {
+
+
+  scroll-behavior:
+
+    smooth;
+
+
+}
+
+
+
+
+
+body {
+
+
+  margin:
+
+    0;
+
+
+  min-height:
+
+    100vh;
+
+
+  overflow-x:
+
+    hidden;
+
+
+  background:
+
+    var(--bg);
+
+
+  color:
+
+    var(--text);
+
+
+}
+
+
+
+
+
+img {
+
+
+  display:
+
+    block;
+
+
+  max-width:
+
+    100%;
+
+
+}
+
+
+
+
+
+a {
+
+  color: var(--accent);
+
+}
+
+
+
+
+
+button,
+input,
+textarea,
+select {
+
+
+  font:
+
+    inherit;
+
+
+}
+
+
+
+
+
+button {
+
+
+  border:
+
+    0;
+
+
+  background:
+
+    none;
+
+
+}
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+
+
+  margin:
+
+    0;
+
+
+}
+
+
+
+
+
+ul,
+ol {
+
+
+  list-style:
+
+    none;
+
+
+  padding:
+
+    0;
+
+
+  margin:
+
+    0;
+
+
+}
+
+
+
+
+
+/* =====================================
+   SELECTION
+===================================== */
+
+
+::selection {
+
+  background: var(--color-2);
+
+  color: var(--color-5);
+
+}
+
+
+
+
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+
+::-webkit-scrollbar {
+
+
+  width:
+
+    10px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+  background: var(--bg);
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+  background: rgba(44,62,80,.18);
+
+  border-radius: 20px;
+
+}
+
+
+
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+
+[data-theme="light"] body {
+
+
+  background:
+
+    #ffffff;
+
+
+  color:
+
+    #050505;
+
+
+}
+
+
+
+[data-theme="light"] ::selection {
+
+
+  background:
+
+    rgba(0,0,0,.15);
+
+
+  color:
+
+    #000000;
+
+
+}
+
+
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+
+
+  background:
+
+    #ffffff;
+
+
+}
+
+
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+
+
+  background:
+
+    rgba(0,0,0,.2);
+
+
+}
