@@ -1,0 +1,486 @@
+/* FILE: css/effects.css */
+
+
+/* =====================================
+   GLASS EFFECT
+===================================== */
+
+
+.glass {
+
+
+  background:
+
+    rgba(255,255,255,.06);
+
+
+  backdrop-filter:
+
+    blur(24px);
+
+
+  -webkit-backdrop-filter:
+
+    blur(24px);
+
+
+  border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+
+[data-theme="light"] .glass {
+
+
+  background:
+
+    rgba(0,0,0,.04);
+
+
+  border-color:
+
+    rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+/* =====================================
+   GLOW EFFECT
+===================================== */
+
+
+.glow {
+
+
+  position:
+
+    relative;
+
+
+}
+
+
+
+
+
+.glow::before {
+
+
+  content:"";
+
+
+  position:
+
+    absolute;
+
+
+  inset:
+
+    -40px;
+
+
+  background:
+
+
+    radial-gradient(
+
+      circle,
+
+      rgba(255,255,255,.18),
+
+      transparent 70%
+
+    );
+
+
+  filter:
+
+    blur(50px);
+
+
+  opacity:
+
+    0;
+
+
+  transition:
+
+    opacity .5s ease;
+
+
+  pointer-events:
+
+    none;
+
+
+}
+
+
+
+
+
+.glow:hover::before {
+
+
+  opacity:
+
+    1;
+
+
+}
+
+
+
+
+
+/* =====================================
+   IMAGE HOVER ZOOM
+===================================== */
+
+
+.image-hover {
+
+
+  overflow:
+
+    hidden;
+
+
+}
+
+
+
+
+
+.image-hover img {
+
+
+  transition:
+
+
+    transform .8s cubic-bezier(.2,.8,.2,1),
+
+    filter .5s ease;
+
+
+}
+
+
+
+
+
+.image-hover:hover img {
+
+
+  transform:
+
+    scale(1.08);
+
+
+}
+
+
+
+
+
+/* =====================================
+   IMAGE DARK OVERLAY
+===================================== */
+
+
+.image-overlay {
+
+
+  position:
+
+    relative;
+
+
+}
+
+
+
+
+
+.image-overlay::after {
+
+
+  content:"";
+
+
+  position:
+
+    absolute;
+
+
+  inset:
+
+    0;
+
+
+  background:
+
+    linear-gradient(
+
+      180deg,
+
+      transparent,
+
+      rgba(0,0,0,.4)
+
+    );
+
+
+  opacity:
+
+    0;
+
+
+  transition:
+
+    opacity .4s ease;
+
+
+}
+
+
+
+
+
+.image-overlay:hover::after {
+
+
+  opacity:
+
+    1;
+
+
+}
+
+
+
+
+
+/* =====================================
+   CARD HOVER
+===================================== */
+
+
+.project-card {
+
+
+  transition:
+
+
+    transform .5s cubic-bezier(.2,.8,.2,1);
+
+
+}
+
+
+
+
+
+.project-card:hover {
+
+
+  transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+/* =====================================
+   BORDER SHINE
+===================================== */
+
+
+.border-shine {
+
+
+  position:
+
+    relative;
+
+
+  overflow:
+
+    hidden;
+
+
+}
+
+
+
+
+
+.border-shine::before {
+
+
+  content:"";
+
+
+  position:
+
+    absolute;
+
+
+  top:
+
+    0;
+
+
+  left:
+
+    -100%;
+
+
+  width:
+
+    50%;
+
+
+  height:
+
+    100%;
+
+
+  background:
+
+
+    linear-gradient(
+
+      90deg,
+
+      transparent,
+
+      rgba(255,255,255,.25),
+
+      transparent
+
+    );
+
+
+  transition:
+
+    left .8s ease;
+
+
+}
+
+
+
+
+
+.border-shine:hover::before {
+
+
+  left:
+
+    150%;
+
+
+}
+
+
+
+
+
+/* =====================================
+   BLUR BACKGROUND ORB
+===================================== */
+
+
+.orb {
+
+
+  position:
+
+    absolute;
+
+
+  border-radius:
+
+    50%;
+
+
+  filter:
+
+    blur(80px);
+
+
+  pointer-events:
+
+    none;
+
+
+}
+
+
+
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+
+[data-theme="light"] .glow::before {
+
+
+  background:
+
+
+    radial-gradient(
+
+      circle,
+
+      rgba(0,0,0,.12),
+
+      transparent 70%
+
+    );
+
+
+}
+
+
+
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+  .project-card,
+  .image-hover img {
+
+
+    transition:
+
+      none;
+
+
+  }
+
+
+}

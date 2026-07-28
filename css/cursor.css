@@ -1,0 +1,275 @@
+/* FILE: css/cursor.css */
+
+
+/* =====================================
+   CUSTOM CURSOR
+===================================== */
+
+
+.custom-cursor {
+
+
+  position:
+
+    fixed;
+
+
+  top:
+
+    0;
+
+
+  left:
+
+    0;
+
+
+  width:
+
+    18px;
+
+
+  height:
+
+    18px;
+
+
+  border-radius:
+
+    50%;
+
+
+  background:
+
+    var(--text);
+
+
+  border:
+
+    2px solid var(--bg);
+
+
+  box-shadow:
+
+    0 0 20px rgba(0,0,0,.35);
+
+
+  pointer-events:
+
+    none;
+
+
+  z-index:
+
+    99999;
+
+
+  transform:
+
+    translate(-50%, -50%);
+
+
+  transition:
+
+
+    width .3s ease,
+
+    height .3s ease,
+
+    background .3s ease,
+
+    opacity .3s ease;
+
+
+}
+
+
+
+
+
+/* =====================================
+   HOVER STATE
+===================================== */
+
+
+.custom-cursor.active {
+
+
+  width:
+
+    55px;
+
+
+  height:
+
+    55px;
+
+
+  background:
+
+    transparent;
+
+
+  border:
+
+    2px solid var(--text);
+
+
+}
+
+
+
+
+
+/* =====================================
+   CLICK STATE
+===================================== */
+
+
+.custom-cursor.click {
+
+
+  width:
+
+    35px;
+
+
+  height:
+
+    35px;
+
+
+}
+
+
+
+
+
+/* =====================================
+   IMAGE / GIF SUPPORT
+===================================== */
+
+
+.project-media:hover ~ .custom-cursor,
+.project-card:hover .custom-cursor {
+
+
+  mix-blend-mode:
+
+    normal;
+
+
+}
+
+
+
+
+
+/* =====================================
+   LIGHT MODE FIX
+===================================== */
+
+
+[data-theme="light"] .custom-cursor {
+
+
+  background:
+
+    #000;
+
+
+  border-color:
+
+    #fff;
+
+
+  box-shadow:
+
+    0 0 18px rgba(0,0,0,.45);
+
+
+}
+
+
+
+
+
+[data-theme="light"] .custom-cursor.active {
+
+
+  background:
+
+    transparent;
+
+
+  border-color:
+
+    #000;
+
+
+}
+
+
+
+
+
+/* =====================================
+   HIDE ON MOBILE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+.custom-cursor {
+
+
+  display:
+
+    none;
+
+
+}
+
+
+
+a,
+button,
+.magnetic,
+.project-card {
+
+
+  cursor:
+
+    pointer;
+
+
+}
+
+
+}
+
+
+
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+.custom-cursor {
+
+
+  transition:
+
+    none;
+
+
+}
+
+
+}

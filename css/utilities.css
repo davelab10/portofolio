@@ -1,0 +1,403 @@
+/* FILE: css/utilities.css */
+
+
+/* =====================================
+   DISPLAY
+===================================== */
+
+
+.hidden {
+
+  display:none !important;
+
+}
+
+
+.block {
+
+  display:block;
+
+}
+
+
+.flex {
+
+  display:flex;
+
+}
+
+
+.inline-flex {
+
+  display:inline-flex;
+
+}
+
+
+
+
+
+/* =====================================
+   FLEX HELPERS
+===================================== */
+
+
+.items-center {
+
+  align-items:center;
+
+}
+
+
+.items-start {
+
+  align-items:flex-start;
+
+}
+
+
+.items-end {
+
+  align-items:flex-end;
+
+}
+
+
+.justify-center {
+
+  justify-content:center;
+
+}
+
+
+.justify-between {
+
+  justify-content:space-between;
+
+}
+
+
+.justify-end {
+
+  justify-content:flex-end;
+
+}
+
+
+
+
+
+/* =====================================
+   DIRECTION
+===================================== */
+
+
+.flex-col {
+
+  flex-direction:column;
+
+}
+
+
+.flex-row {
+
+  flex-direction:row;
+
+}
+
+
+
+
+
+/* =====================================
+   POSITION
+===================================== */
+
+
+.relative {
+
+  position:relative;
+
+}
+
+
+.absolute {
+
+  position:absolute;
+
+}
+
+
+.fixed {
+
+  position:fixed;
+
+}
+
+
+
+
+
+/* =====================================
+   WIDTH / HEIGHT
+===================================== */
+
+
+.w-full {
+
+  width:100%;
+
+}
+
+
+.h-full {
+
+  height:100%;
+
+}
+
+
+.min-h-screen {
+
+  min-height:100vh;
+
+}
+
+
+
+
+
+/* =====================================
+   SPACING
+===================================== */
+
+
+.mx-auto {
+
+  margin-inline:auto;
+
+}
+
+
+.mt-auto {
+
+  margin-top:auto;
+
+}
+
+
+.mb-auto {
+
+  margin-bottom:auto;
+
+}
+
+
+
+
+
+/* =====================================
+   TEXT
+===================================== */
+
+
+.text-center {
+
+  text-align:center;
+
+}
+
+
+.uppercase {
+
+  text-transform:uppercase;
+
+}
+
+
+.tracking-wide {
+
+  letter-spacing:.15em;
+
+}
+
+
+.font-bold {
+
+  font-weight:700;
+
+}
+
+
+
+
+
+/* =====================================
+   COLORS
+===================================== */
+
+
+.opacity-50 {
+
+  opacity:.5;
+
+}
+
+
+.opacity-70 {
+
+  opacity:.7;
+
+}
+
+
+
+
+
+/* =====================================
+   OVERFLOW
+===================================== */
+
+
+.overflow-hidden {
+
+  overflow:hidden;
+
+}
+
+
+.overflow-visible {
+
+  overflow:visible;
+
+}
+
+
+
+
+
+/* =====================================
+   RADIUS
+===================================== */
+
+
+.rounded {
+
+  border-radius:16px;
+
+}
+
+
+.rounded-xl {
+
+  border-radius:32px;
+
+}
+
+
+.rounded-full {
+
+  border-radius:999px;
+
+}
+
+
+
+
+
+/* =====================================
+   TRANSITION
+===================================== */
+
+
+.transition {
+
+  transition:
+
+    all .3s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+
+
+
+/* =====================================
+   GPU OPTIMIZATION
+===================================== */
+
+
+.gpu {
+
+
+  transform:
+
+    translateZ(0);
+
+
+  will-change:
+
+    transform;
+
+}
+
+
+
+
+
+/* =====================================
+   POINTER
+===================================== */
+
+
+.pointer {
+
+  cursor:pointer;
+
+}
+
+
+
+
+
+/* =====================================
+   DESKTOP ONLY
+===================================== */
+
+
+@media(max-width:900px){
+
+
+  .desktop-only {
+
+
+    display:none !important;
+
+
+  }
+
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE ONLY
+===================================== */
+
+
+@media(min-width:901px){
+
+
+  .mobile-only {
+
+
+    display:none !important;
+
+
+  }
+
+
+}

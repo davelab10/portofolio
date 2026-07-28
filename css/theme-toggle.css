@@ -1,0 +1,188 @@
+/* FILE: css/theme-toggle.css */
+
+
+/* =====================================
+   THEME TOGGLE BUTTON
+===================================== */
+
+
+.theme-toggle {
+
+
+  width:
+
+    42px;
+
+
+  height:
+
+    42px;
+
+
+  display:
+
+    flex;
+
+
+  align-items:
+
+    center;
+
+
+  justify-content:
+
+    center;
+
+
+  border-radius:
+
+    50%;
+
+
+  border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+  color:
+
+    var(--text);
+
+
+  background:
+
+    rgba(255,255,255,.05);
+
+
+  cursor:
+
+    pointer;
+
+
+  font-size:
+
+    18px;
+
+
+  transition:
+
+
+    transform .3s ease,
+
+    background .3s ease,
+
+    border-color .3s ease;
+
+
+}
+
+
+
+
+
+/* =====================================
+   HOVER
+===================================== */
+
+
+.theme-toggle:hover {
+
+
+  transform:
+
+    rotate(20deg);
+
+
+  background:
+
+    rgba(255,255,255,.12);
+
+
+}
+
+
+
+
+
+.theme-toggle:active {
+
+
+  transform:
+
+    scale(.9);
+
+
+}
+
+
+
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+
+[data-theme="light"] .theme-toggle {
+
+
+  border-color:
+
+    rgba(0,0,0,.15);
+
+
+  background:
+
+    rgba(0,0,0,.05);
+
+
+}
+
+
+
+
+
+[data-theme="light"] .theme-toggle:hover {
+
+
+  background:
+
+    rgba(0,0,0,.1);
+
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+  .theme-toggle {
+
+
+    width:
+
+      38px;
+
+
+    height:
+
+      38px;
+
+
+    font-size:
+
+      16px;
+
+
+  }
+
+
+}

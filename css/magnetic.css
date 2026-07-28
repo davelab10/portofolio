@@ -1,0 +1,251 @@
+/* FILE: css/magnetic.css */
+
+
+/* =====================================
+   MAGNETIC ELEMENT BASE
+===================================== */
+
+
+.magnetic {
+
+
+  display:
+
+    inline-flex;
+
+
+  align-items:
+
+    center;
+
+
+  justify-content:
+
+    center;
+
+
+  position:
+
+    relative;
+
+
+  will-change:
+
+    transform;
+
+
+  transition:
+
+
+    transform .45s cubic-bezier(.2,.8,.2,1);
+
+
+}
+
+
+
+
+
+/* =====================================
+   MAGNETIC BUTTON
+===================================== */
+
+
+.magnetic.button {
+
+
+  position:
+
+    relative;
+
+
+  overflow:
+
+    hidden;
+
+
+  isolation:
+
+    isolate;
+
+
+}
+
+
+
+
+
+/* =====================================
+   BUTTON INNER GLOW
+===================================== */
+
+
+.magnetic.button::before {
+
+
+  content:"";
+
+
+  position:
+
+    absolute;
+
+
+  inset:
+
+    0;
+
+
+  background:
+
+
+    radial-gradient(
+
+      circle at center,
+
+      rgba(255,255,255,.25),
+
+      transparent 60%
+
+    );
+
+
+  opacity:
+
+    0;
+
+
+  transition:
+
+    opacity .4s ease;
+
+
+  z-index:
+
+    -1;
+
+
+}
+
+
+
+
+
+.magnetic.button:hover::before {
+
+
+  opacity:
+
+    1;
+
+
+}
+
+
+
+
+
+/* =====================================
+   MAGNETIC ACTIVE
+===================================== */
+
+
+.magnetic.active {
+
+
+  transform:
+
+    scale(1.05);
+
+
+}
+
+
+
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+
+[data-theme="light"] .magnetic.button::before {
+
+
+  background:
+
+
+    radial-gradient(
+
+      circle at center,
+
+      rgba(0,0,0,.15),
+
+      transparent 60%
+
+    );
+
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE DISABLE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+  .magnetic {
+
+
+    transform:
+
+      none !important;
+
+
+  }
+
+
+
+  .magnetic.button:hover::before {
+
+
+    opacity:
+
+      0;
+
+
+  }
+
+
+}
+
+
+
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+  .magnetic {
+
+
+    transition:
+
+      none;
+
+
+  }
+
+
+}

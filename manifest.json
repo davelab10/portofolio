@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio Showcase",
+  "short_name": "Portfolio",
+
+  "start_url": "./index.html",
+
+  "display": "standalone",
+
+  "background_color": "#050505",
+
+  "theme_color": "#050505",
+
+  "description": "Fullscreen portfolio showcase with modern motion experience.",
+
+
+  "icons": [
+
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+
+  ]
+}
