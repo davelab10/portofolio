@@ -11,7 +11,7 @@
 
   padding:
 
-    120px 8vw;
+    88px 8vw;
 
 
 }
@@ -62,6 +62,11 @@
     1px solid var(--border);
 
 
+  border-left:
+
+    3px solid var(--accent);
+
+
   border-radius:
 
     24px;
@@ -69,7 +74,7 @@
 
   background:
 
-    var(--card);
+    var(--tint-blue);
 
 
   transition:
@@ -136,6 +141,47 @@
 
     .7;
 
+
+}
+
+
+.icon-badge {
+
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+
+}
+
+.icon-badge svg {
+
+  width: 22px;
+  height: 22px;
+
+}
+
+.tag-row {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+
+}
+
+.tag-row .tag {
+
+  font-size: .78rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-secondary);
 
 }
 
@@ -223,6 +269,11 @@
   border:
 
     1px solid var(--border);
+
+
+  border-left:
+
+    3px solid var(--accent);
 
 
   border-radius:
@@ -467,24 +518,24 @@
 
 .button,
 .magnetic.button {
-  background: var(--color-2);
-  color: var(--color-5);
+  background: var(--text);
+  color: var(--bg);
   border: 1px solid var(--border);
 }
 
 .contact-cta {
-  background: var(--color-1);
-  color: var(--color-5);
+  background: var(--text);
+  color: var(--bg);
   border: 1px solid rgba(0,0,0,0.08);
 }
 
 .button:hover,
 .magnetic.button:hover {
-  background: var(--color-1);
+  background: var(--accent);
 }
 
 .contact-cta:hover {
-  filter: brightness(0.95);
+  background: var(--accent);
 }
 
 
@@ -561,7 +612,7 @@
 
   padding:
 
-    80px 24px;
+    56px 24px;
 
 
 }

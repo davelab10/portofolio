@@ -235,9 +235,9 @@ ol {
 
 ::selection {
 
-  background: var(--color-2);
+  background: var(--accent);
 
-  color: var(--color-5);
+  color: var(--bg);
 
 }
 

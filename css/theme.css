@@ -1,31 +1,28 @@
 /* FILE: css/theme.css */
 
-/* Palette (user-provided) */
+/* Palette (established brand tokens) */
 :root {
-  --color-1: #2C3E50; /* darkest */
-  --color-2: #34495E;
-  --color-3: #7F8C8D;
-  --color-4: #BDC3C7;
-  --color-5: #ECF0F1; /* lightest */
-
-  /* Theme tokens */
-  --bg: var(--color-5);
-  --surface: var(--color-4);
-  --text: var(--color-1);
-  --text-muted: rgba(44,62,80,0.72);
-  --border: rgba(44,62,80,0.08);
-  --accent: var(--color-2);
+  --bg: #FDFDFB;              /* page background */
+  --tint: #F5F5F2;            /* neutral tint (surfaces, thumbnails) */
+  --tint-blue: #EFF4FF;       /* pale blue tint (card backgrounds, near-white) */
+  --card: #FFFFFF;            /* default card background */
+  --surface: var(--tint);
+  --border: #E4E4E0;
+  --text: #14161B;            /* primary text */
+  --text-secondary: #6B6F76;  /* body copy */
+  --text-muted: #9A9DA3;      /* de-emphasized / meta text */
+  --accent: #2563EB;          /* brand blue */
 }
 
 
 /* Optional light-theme overrides (kept for compatibility) */
 [data-theme="light"] {
-  --bg: #f7f5ef;
-  --surface: #ffffff;
-  --text: #111111;
-  --text-muted: rgba(17,17,17,.7);
-  --border: rgba(17,17,17,.12);
-  --accent: #111111;
+  --bg: #FDFDFB;
+  --surface: #FFFFFF;
+  --text: #14161B;
+  --text-muted: #9A9DA3;
+  --border: #E4E4E0;
+  --accent: #2563EB;
 }
 
 
@@ -57,7 +54,7 @@ body,
 }
 
 p {
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 /* Surface and borders */

@@ -23,6 +23,16 @@
     center;
 
 
+  justify-content:
+
+    space-between;
+
+
+  gap:
+
+    48px;
+
+
   padding:
 
     140px 8vw 100px;
@@ -40,6 +50,157 @@
 
     900px;
 
+
+}
+
+
+
+
+
+/* =====================================
+   HERO VISUAL (floating card)
+===================================== */
+
+
+.hero-visual {
+
+  flex-shrink:
+
+    0;
+
+}
+
+
+.hero-card {
+
+  width:
+
+    260px;
+
+
+  background:
+
+    var(--tint-blue);
+
+
+  border:
+
+    1px solid var(--border);
+
+
+  border-radius:
+
+    20px;
+
+
+  padding:
+
+    22px;
+
+
+  box-shadow:
+
+    0 20px 45px rgba(20,22,27,.08);
+
+
+  transform:
+
+    rotate(-3deg);
+
+
+  animation:
+
+    heroCardFloat 5s ease-in-out infinite;
+
+}
+
+
+.hero-card-label {
+
+  font-family:
+
+    ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+
+  font-size:
+
+    10.5px;
+
+
+  letter-spacing:
+
+    .12em;
+
+
+  text-transform:
+
+    uppercase;
+
+
+  color:
+
+    var(--text-muted);
+
+
+  margin-bottom:
+
+    12px;
+
+}
+
+
+.hero-card pre {
+
+  margin:
+
+    0;
+
+
+  font-family:
+
+    ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+
+  font-size:
+
+    12px;
+
+
+  line-height:
+
+    1.7;
+
+
+  color:
+
+    var(--text);
+
+
+  white-space:
+
+    pre-wrap;
+
+}
+
+
+@keyframes heroCardFloat {
+
+  0%, 100% {
+
+    transform:
+
+      rotate(-3deg) translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:
+
+      rotate(-3deg) translateY(-10px);
+
+  }
 
 }
 
@@ -348,6 +509,15 @@ footer img {
 
     120px 24px 80px;
 
+}
+
+
+.hero-visual {
+
+
+  display:
+
+    none;
 
 }
 
